@@ -19,6 +19,7 @@ public class UserController {
 	@PostMapping("/register")
 	public String register(@RequestBody User user) {
 		userRepository.save(user);
+		System.out.print(user);
 		return "Registration Successfull";
 	}
 
